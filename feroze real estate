@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feroze Estate Agency | Premium Office Spaces Bangalore</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --bg-dark: #0e141b;
+  --bg-soft: #131b24;
+  --gold: #c6a15b;
+  --gold-light: #d4b87a;
+  --text-main: #f1f1f1;
+  --text-muted: #a9b0bb;
+  --section-spacing: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(14, 20, 27, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  transition: padding 0.3s;
+}
+
+nav.scrolled {
+  padding: 15px 60px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 30px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+nav a:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s;
+}
+
+nav a:hover:after {
+  width: 100%;
+}
+
+.nav-cta {
+  padding: 10px 22px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 2px;
+  margin-left: 30px;
+}
+
+.nav-cta:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(14, 20, 27, 0.7), rgba(14, 20, 27, 0.85)),
+    url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') center/cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 750px;
+  margin-left: 8%;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 18px 40px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.cta:hover {
+  background: var(--gold);
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(198, 161, 91, 0.2);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-muted);
+  font-size: 14px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+  40% {transform: translateY(-10px) translateX(-50%);}
+  60% {transform: translateY(-5px) translateX(-50%);}
+}
+
+/* SECTION STYLES */
+section {
+  padding: var(--section-spacing) 8%;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.section-sub {
+  color: var(--text-muted);
+  max-width: 650px;
+  margin-bottom: 60px;
+  font-size: 17px;
+}
+
+/* PREMIUM PROPERTIES SECTION */
+.properties-section {
+  background: var(--bg-soft);
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.property-card {
+  background: var(--bg-dark);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.property-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.property-image {
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.property-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--gold);
+  color: #000;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.property-details {
+  padding: 30px;
+}
+
+.property-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.property-location {
+  color: var(--gold);
+  font-size: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.property-location i {
+  margin-right: 8px;
+}
+
+.property-features {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature i {
+  color: var(--gold);
+  font-size: 20px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.feature span {
+  display: block;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.property-price {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.price-period {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-left: 5px;
+}
+
+.property-description {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.property-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.property-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* ABOUT SECTION */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  color: var(--text-muted);
+}
+
+.stats {
+  display: flex;
+  margin-top: 40px;
+}
+
+.stat-item {
+  margin-right: 50px;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--gold);
+  display: block;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-image {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  height: 500px;
+  background: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80') center/cover;
+}
+
+/* FEATURES SECTION */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.feature {
+  padding: 30px;
+  background: var(--bg-soft);
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 36px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.feature p {
+  color: var(--text-muted);
+}
+
+/* LOCATION SECTION */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.location-info p {
+  margin-bottom: 20px;
+  color: var(--text-muted);
+}
+
+.location-features {
+  margin-top: 30px;
+}
+
+.location-feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.location-feature i {
+  color: var(--gold);
+  margin-right: 15px;
+}
+
+.location-map {
+  height: 400px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+/* CONTACT SECTION */
+.contact {
+  background: var(--bg-soft);
+  text-align: center;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  text-align: left;
+  margin-top: 40px;
+}
+
+.contact-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-detail i {
+  color: var(--gold);
+  margin-right: 15px;
+  font-size: 18px;
+  width: 24px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: var(--gold);
+  color: #000;
+  border: none;
+  padding: 15px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: var(--gold-light);
+}
+
+/* FOOTER */
+footer {
+  background: #0a0f14;
+  padding: 60px 8% 30px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-column h4 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-column a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 30px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #25D366;
+  color: #fff;
+  padding: 16px 22px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+  z-index: 100;
+  transition: transform 0.3s;
+}
+
+.whatsapp:hover {
+  transform: translateY(-3px);
+}
+
+.whatsapp i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+  .hero h1 {
+    font-size: 54px;
+  }
+  
+  .about-grid,
+  .location-grid,
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .about-image {
+    height: 400px;
+  }
+  
+  .properties-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 20px;
+  }
+  
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-dark);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  nav a {
+    margin: 10px 0;
+  }
+  
+  .nav-cta {
+    margin: 10px 0 0 0;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .hero-content {
+    margin: 0 6%;
+  }
+  
+  .hero h1 {
+    font-size: 42px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .properties-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .stats {
+    flex-direction: column;
+  }
+  
+  .stat-item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .property-features {
+    flex-wrap: wrap;
+  }
+  
+  .feature {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav id="navbar">
+  <div class="logo">Feroze <span>Estate</span></div>
+  <div class="nav-links">
+    <a href="#properties">Properties</a>
+    <a href="#about">About</a>
+    <a href="#features">Amenities</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Book Viewing</a>
+  </div>
+  <button class="mobile-menu-btn" id="menuBtn">
+    <i class="fas fa-bars"></i>
+  </button>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Refined Office Spaces for Distinguished Businesses</h1>
+    <p>For decades, Feroze Estate Agency has been shaping Bangalore's premium commercial real estate landscape with exclusive, fully-furnished office spaces in prime locations.</p>
+    <a href="#properties" class="cta">View Our Properties</a>
+  </div>
+  <div class="scroll-indicator">
+    <i class="fas fa-chevron-down"></i> Scroll to explore
+  </div>
+</div>
+
+<!-- Premium Properties Section -->
+<section id="properties" class="properties-section">
+  <h2 class="section-title">Premium Properties</h2>
+  <p class="section-sub">Explore our exclusive portfolio of premium office spaces in Bangalore's most prestigious locations.</p>
+  
+  <div class="properties-grid">
+    <!-- Property 1 -->
+    <div class="property-card">
+      <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');">
+        <div class="property-badge">Premium</div>
+      </div>
+      <div class="property-details">
+        <h3 class="property-title">Prestige Feroze - Executive Suite</h3>
+        <div class="property-location">
+          <i class="fas fa-map-marker-alt"></i> Cunningham Road, Bangalore
+        </div>
+        
+        <div class="property-features">
+          <div class="feature">
+            <i class="fas fa-expand-arrows-alt"></i>
+            <span>2,500 sq.ft.</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-users"></i>
+            <span>15-20 People</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-door-open"></i>
+            <span>4 Cabins</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shower"></i>
+            <span>2 Washrooms</span>
+          </div>
+        </div>
+        
+        <div class="property-price">₹2,75,000<span class="price-period">/month</span></div>
+        
+        <p class="property-description">Luxurious corner office with panoramic city views, executive cabins, boardroom, pantry, and dedicated reception area. Includes high-speed internet and concierge services.</p>
+        
+        <a href="#contact" class="property-btn">Schedule Viewing</a>
+      </div>
+    </div>
+    
+    <!-- Property 2 -->
+    <div class="property-card">
+      <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+        <div class="property-badge">New Listing</div>
+      </div>
+      <div class="property-details">
+        <h3 class="property-title">The Vantage - Corporate Office</h3>
+        <div class="property-location">
+          <i class="fas fa-map-marker-alt"></i> Lavelle Road, Bangalore
+        </div>
+        
+        <div class="property-features">
+          <div class="feature">
+            <i class="fas fa-expand-arrows-alt"></i>
+            <span>3,800 sq.ft.</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-users"></i>
+            <span>25-30 People</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-door-open"></i>
+            <span>6 Cabins</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shower"></i>
+            <span>3 Washrooms</span>
+          </div>
+        </div>
+        
+        <div class="property-price">₹4,25,000<span class="price-period">/month</span></div>
+        
+        <p class="property-description">Spacious corporate office with modern interiors, dedicated server room, large conference facility, and pantry. Includes 8 reserved parking slots and 24/7 security.</p>
+        
+        <a href="#contact" class="property-btn">Schedule Viewing</a>
+      </div>
+    </div>
+    
+    <!-- Property 3 -->
+    <div class="property-card">
+      <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1560185007-c5ca9d2c014d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+        <div class="property-badge">Fully Furnished</div>
+      </div>
+      <div class="property-details">
+        <h3 class="property-title">Cunningham Heights</h3>
+        <div class="property-location">
+          <i class="fas fa-map-marker-alt"></i> Richmond Circle, Bangalore
+        </div>
+        
+        <div class="property-features">
+          <div class="feature">
+            <i class="fas fa-expand-arrows-alt"></i>
+            <span>1,800 sq.ft.</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-users"></i>
+            <span>10-12 People</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-door-open"></i>
+            <span>3 Cabins</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shower"></i>
+            <span>2 Washrooms</span>
+          </div>
+        </div>
+        
+        <div class="property-price">₹1,95,000<span class="price-period">/month</span></div>
+        
+        <p class="property-description">Elegant boutique office space with premium furnishings, natural lighting, and ergonomic workstations. Ideal for legal firms, consultants, and financial advisors.</p>
+        
+        <a href="#contact" class="property-btn">Schedule Viewing</a>
+      </div>
+    </div>
+    
+    <!-- Property 4 -->
+    <div class="property-card">
+      <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80');">
+        <div class="property-badge">Penthouse View</div>
+      </div>
+      <div class="property-details">
+        <h3 class="property-title">Skyline Tower - Penthouse Office</h3>
+        <div class="property-location">
+          <i class="fas fa-map-marker-alt"></i> MG Road, Bangalore
+        </div>
+        
+        <div class="property-features">
+          <div class="feature">
+            <i class="fas fa-expand-arrows-alt"></i>
+            <span>4,500 sq.ft.</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-users"></i>
+            <span>35-40 People</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-door-open"></i>
+            <span>8 Cabins</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shower"></i>
+            <span>4 Washrooms</span>
+          </div>
+        </div>
+        
+        <div class="property-price">₹5,75,000<span class="price-period">/month</span></div>
+        
+        <p class="property-description">Exclusive penthouse office with 360° city views, private terrace, executive lounge, and premium finishes throughout. Includes VIP parking and private elevator access.</p>
+        
+        <a href="#contact" class="property-btn">Schedule Viewing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h2 class="section-title">A Legacy of Trust</h2>
+  <p class="section-sub">
+    Located at Prestige Feroze, Cunningham Road, we specialize in furnished, ready-to-move office spaces for corporates and professionals, offering discretion and excellence since 1998.
+  </p>
+  
+  <div class="about-grid">
+    <div class="about-content">
+      <p>Feroze Estate Agency represents the pinnacle of commercial real estate in Bangalore. With over two decades of expertise, we've cultivated relationships with Bangalore's most discerning businesses.</p>
+      <p>Our portfolio includes meticulously curated office spaces that blend contemporary design with functional efficiency, located exclusively in Bangalore's most prestigious commercial zones.</p>
+      
+      <div class="stats">
+        <div class="stat-item">
+          <span class="stat-number">25+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Properties</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Client Retention</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-image"></div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features">
+  <h2 class="section-title">Premium Amenities</h2>
+  <p class="section-sub">Our office spaces are designed with business success in mind, featuring amenities that enhance productivity and reflect your company's stature.</p>
+  
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <h3>Prime Addresses</h3>
+      <p>Strategically located commercial spaces in Bangalore's most sought-after zones with excellent connectivity and prestige.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="fas fa-chair"></i>
+      </div>
+      <h3>Fully Furnished</h3>
+      <p>Designer-furnished interiors with premium finishes, ready for immediate occupancy with no additional setup required.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Discreet & Professional</h3>
+      <p>We prioritize confidentiality and integrity in all our dealings, ensuring a seamless experience for our clients.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="fas fa-concierge-bell"></i>
+      </div>
+      <h3>Concierge Services</h3>
+      <p>24/7 building management, dedicated support staff, and premium maintenance services for hassle-free operations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Location Section -->
+<section id="location">
+  <h2 class="section-title">Prime Location</h2>
+  <p class="section-sub">Our flagship property at Prestige Feroze, Cunningham Road places your business at the heart of Bangalore's commercial activity.</p>
+  
+  <div class="location-grid">
+    <div class="location-info">
+      <p>Cunningham Road is Bangalore's most prestigious commercial address, home to multinational corporations, financial institutions, and elite professional firms.</p>
+      <p>The location offers unparalleled connectivity to the rest of the city, with proximity to major business districts, luxury hotels, fine dining, and transportation hubs.</p>
+      
+      <div class="location-features">
+        <div class="location-feature">
+          <i class="fas fa-train"></i>
+          <span>5 minutes from Bangalore Metro</span>
+        </div>
+        <div class="location-feature">
+          <i class="fas fa-hotel"></i>
+          <span>Adjacent to 5-star hotels</span>
+        </div>
+        <div class="location-feature">
+          <i class="fas fa-utensils"></i>
+          <span>Fine dining restaurants within walking distance</span>
+        </div>
+        <div class="location-feature">
+          <i class="fas fa-shield-alt"></i>
+          <span>24/7 security and surveillance</span>
+        </div>
+      </div>
+    </div>
+    <div class="location-map">
+      <p><i class="fas fa-map-marked-alt" style="font-size: 48px; margin-bottom: 20px;"></i><br>Prestige Feroze, Cunningham Road, Bengaluru</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Connect With Us</h2>
+  <p class="section-sub">Schedule a private viewing or discuss your office space requirements with our dedicated consultants.</p>
+  
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <div class="contact-detail">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <strong>Address</strong>
+          <p>Prestige Feroze, Cunningham Road, Bengaluru - 560052</p>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <i class="fas fa-phone"></i>
+        <div>
+          <strong>Phone</strong>
+          <p>+91 98450 18800</p>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <strong>Email</strong>
+          <p>contact@ferozes.com</p>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <i class="fas fa-clock"></i>
+        <div>
+          <strong>Business Hours</strong>
+          <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-form">
+      <form id="inquiryForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone">
+        <select style="width: 100%; padding: 15px; margin-bottom: 20px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-main); font-family: 'Inter', sans-serif; border-radius: 4px;">
+          <option value="">Select Property of Interest</option>
+          <option value="prestige-feroze">Prestige Feroze - Executive Suite</option>
+          <option value="the-vantage">The Vantage - Corporate Office</option>
+          <option value="cunningham-heights">Cunningham Heights</option>
+          <option value="skyline-tower">Skyline Tower - Penthouse Office</option>
+        </select>
+        <textarea placeholder="Your Requirements" required></textarea>
+        <button type="submit">Submit Inquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-column">
+      <h4>Feroze Estate</h4>
+      <p>Premium commercial real estate specialists in Bangalore since 1998.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Properties</h4>
+      <a href="#properties">Prestige Feroze</a>
+      <a href="#properties">The Vantage</a>
+      <a href="#properties">Cunningham Heights</a>
+      <a href="#properties">Skyline Tower</a>
+    </div>
+    <div class="footer-column">
+      <h4>Services</h4>
+      <a href="#">Office Leasing</a>
+      <a href="#">Property Management</a>
+      <a href="#">Corporate Solutions</a>
+      <a href="#">Consultation</a>
+    </div>
+    <div class="footer-column">
+      <h4>Connect</h4>
+      <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="https://wa.me/919845018800"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023 Feroze Estate Agency. All rights reserved. | +91 98450 18800 | ferozes.com</p>
+  </div>
+</footer>
+
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/919845018800">
+  <i class="fab fa-whatsapp"></i> WhatsApp Us
+</a>
+
+<script>
+// Mobile menu toggle
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.querySelector('.nav-links');
+
+menuBtn.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  menuBtn.innerHTML = navLinks.classList.contains('active') 
+    ? '<i class="fas fa-times"></i>' 
+    : '<i class="fas fa-bars"></i>';
+});
+
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    if (this.getAttribute('href') === '#') return;
+    
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+      // Close mobile menu if open
+      navLinks.classList.remove('active');
+      menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      
+      window.scrollTo({
+        top: targetElement.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Form submission
+const inquiryForm = document.getElementById('inquiryForm');
+if (inquiryForm) {
+  inquiryForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your inquiry. We will contact you shortly.');
+    this.reset();
+  });
+}
+
+// Property card interaction
+document.querySelectorAll('.property-btn').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    const propertyTitle = this.closest('.property-card').querySelector('.property-title').textContent;
+    alert(`Thank you for your interest in ${propertyTitle}. We will contact you to schedule a viewing.`);
+    
+    // Scroll to contact section
+    document.querySelector('#contact').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+</body>
+</html>
